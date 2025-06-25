@@ -12,7 +12,7 @@ contract InteractionsTest is Test {
     DeployFundMe deployFundMe;
 
     address USER = makeAddr("user");
-    
+
     uint256 constant SEND_VALUE = 0.1 ether;
     uint256 constant STARTING_BALANCE = 10 ether;
 
@@ -40,5 +40,4 @@ contract InteractionsTest is Test {
         assertEq(afterUserBalance + SEND_VALUE, preUserBalance);
         assertEq(preOwnerBalance + SEND_VALUE + originalFundMeBalance, afterOwnerBalance);
     }
-
 }
